@@ -14,6 +14,12 @@ class App extends Component {
     })
   };
 
+  delet = () => {
+    this.setState({
+      todos: []
+    })
+  }
+
   render() {
     return (
       <div>
@@ -21,7 +27,7 @@ class App extends Component {
         {this.state.todos.map(x => (
           <ToDoListItem todo={x} />
         ))}
-        <button onClick={this.addParameter}> Add todo</button>
+        <button onClick={this.delet}> delet all</button>
       </div>
     );
   }
